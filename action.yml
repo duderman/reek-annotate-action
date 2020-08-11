@@ -1,0 +1,14 @@
+name: Reek Annotate Action
+description: GitHub Action for creating annotations from Reek results JSON file
+author: "Nikolay Norkin <zduderman@gmail.com>"
+branding:
+  icon: alert-triangle
+  color: purple
+inputs:
+  path:
+    required: true
+    description: path to Reek results JSON file
+    default: reek.json
+runs:
+  using: node12
+  main: dist/index.js
