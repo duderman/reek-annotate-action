@@ -19,7 +19,7 @@ jobs:
         with:
           ruby-version: '2.7'
       - run: gem install reek --no-doc
-      - run: reek --format json > reek.json
+      - run: reek . --format json > reek.json
       - uses: duderman/reek-annotate-action@v0.1.0
         if: ${{ failure() }}
 ```
